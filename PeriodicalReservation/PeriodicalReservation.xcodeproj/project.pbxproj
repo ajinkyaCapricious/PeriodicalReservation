@@ -1,0 +1,624 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB9700942B22F48100DFE756 /* PeriodicalReservationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9700932B22F48100DFE756 /* PeriodicalReservationApp.swift */; };
+		FB9700962B22F48100DFE756 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9700952B22F48100DFE756 /* ContentView.swift */; };
+		FB9700982B22F48200DFE756 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB9700972B22F48200DFE756 /* Assets.xcassets */; };
+		FB97009C2B22F48200DFE756 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB97009B2B22F48200DFE756 /* Preview Assets.xcassets */; };
+		FB9700A62B22F48300DFE756 /* PeriodicalReservationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9700A52B22F48300DFE756 /* PeriodicalReservationTests.swift */; };
+		FB9700B02B22F48300DFE756 /* PeriodicalReservationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9700AF2B22F48300DFE756 /* PeriodicalReservationUITests.swift */; };
+		FB9700B22B22F48300DFE756 /* PeriodicalReservationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9700B12B22F48300DFE756 /* PeriodicalReservationUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FB9700A22B22F48200DFE756 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB9700882B22F48100DFE756 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB97008F2B22F48100DFE756;
+			remoteInfo = PeriodicalReservation;
+		};
+		FB9700AC2B22F48300DFE756 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB9700882B22F48100DFE756 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB97008F2B22F48100DFE756;
+			remoteInfo = PeriodicalReservation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FB9700902B22F48100DFE756 /* PeriodicalReservation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeriodicalReservation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB9700932B22F48100DFE756 /* PeriodicalReservationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodicalReservationApp.swift; sourceTree = "<group>"; };
+		FB9700952B22F48100DFE756 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FB9700972B22F48200DFE756 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FB9700992B22F48200DFE756 /* PeriodicalReservation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PeriodicalReservation.entitlements; sourceTree = "<group>"; };
+		FB97009B2B22F48200DFE756 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FB9700A12B22F48200DFE756 /* PeriodicalReservationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeriodicalReservationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB9700A52B22F48300DFE756 /* PeriodicalReservationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodicalReservationTests.swift; sourceTree = "<group>"; };
+		FB9700AB2B22F48300DFE756 /* PeriodicalReservationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeriodicalReservationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB9700AF2B22F48300DFE756 /* PeriodicalReservationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodicalReservationUITests.swift; sourceTree = "<group>"; };
+		FB9700B12B22F48300DFE756 /* PeriodicalReservationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodicalReservationUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB97008D2B22F48100DFE756 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB97009E2B22F48200DFE756 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB9700A82B22F48300DFE756 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB9700872B22F48100DFE756 = {
+			isa = PBXGroup;
+			children = (
+				FB9700922B22F48100DFE756 /* PeriodicalReservation */,
+				FB9700A42B22F48300DFE756 /* PeriodicalReservationTests */,
+				FB9700AE2B22F48300DFE756 /* PeriodicalReservationUITests */,
+				FB9700912B22F48100DFE756 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB9700912B22F48100DFE756 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB9700902B22F48100DFE756 /* PeriodicalReservation.app */,
+				FB9700A12B22F48200DFE756 /* PeriodicalReservationTests.xctest */,
+				FB9700AB2B22F48300DFE756 /* PeriodicalReservationUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB9700922B22F48100DFE756 /* PeriodicalReservation */ = {
+			isa = PBXGroup;
+			children = (
+				FB9700932B22F48100DFE756 /* PeriodicalReservationApp.swift */,
+				FB9700952B22F48100DFE756 /* ContentView.swift */,
+				FB9700972B22F48200DFE756 /* Assets.xcassets */,
+				FB9700992B22F48200DFE756 /* PeriodicalReservation.entitlements */,
+				FB97009A2B22F48200DFE756 /* Preview Content */,
+			);
+			path = PeriodicalReservation;
+			sourceTree = "<group>";
+		};
+		FB97009A2B22F48200DFE756 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FB97009B2B22F48200DFE756 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FB9700A42B22F48300DFE756 /* PeriodicalReservationTests */ = {
+			isa = PBXGroup;
+			children = (
+				FB9700A52B22F48300DFE756 /* PeriodicalReservationTests.swift */,
+			);
+			path = PeriodicalReservationTests;
+			sourceTree = "<group>";
+		};
+		FB9700AE2B22F48300DFE756 /* PeriodicalReservationUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FB9700AF2B22F48300DFE756 /* PeriodicalReservationUITests.swift */,
+				FB9700B12B22F48300DFE756 /* PeriodicalReservationUITestsLaunchTests.swift */,
+			);
+			path = PeriodicalReservationUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB97008F2B22F48100DFE756 /* PeriodicalReservation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB9700B52B22F48300DFE756 /* Build configuration list for PBXNativeTarget "PeriodicalReservation" */;
+			buildPhases = (
+				FB97008C2B22F48100DFE756 /* Sources */,
+				FB97008D2B22F48100DFE756 /* Frameworks */,
+				FB97008E2B22F48100DFE756 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PeriodicalReservation;
+			productName = PeriodicalReservation;
+			productReference = FB9700902B22F48100DFE756 /* PeriodicalReservation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB9700A02B22F48200DFE756 /* PeriodicalReservationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB9700B82B22F48300DFE756 /* Build configuration list for PBXNativeTarget "PeriodicalReservationTests" */;
+			buildPhases = (
+				FB97009D2B22F48200DFE756 /* Sources */,
+				FB97009E2B22F48200DFE756 /* Frameworks */,
+				FB97009F2B22F48200DFE756 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB9700A32B22F48200DFE756 /* PBXTargetDependency */,
+			);
+			name = PeriodicalReservationTests;
+			productName = PeriodicalReservationTests;
+			productReference = FB9700A12B22F48200DFE756 /* PeriodicalReservationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FB9700AA2B22F48300DFE756 /* PeriodicalReservationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB9700BB2B22F48300DFE756 /* Build configuration list for PBXNativeTarget "PeriodicalReservationUITests" */;
+			buildPhases = (
+				FB9700A72B22F48300DFE756 /* Sources */,
+				FB9700A82B22F48300DFE756 /* Frameworks */,
+				FB9700A92B22F48300DFE756 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB9700AD2B22F48300DFE756 /* PBXTargetDependency */,
+			);
+			name = PeriodicalReservationUITests;
+			productName = PeriodicalReservationUITests;
+			productReference = FB9700AB2B22F48300DFE756 /* PeriodicalReservationUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB9700882B22F48100DFE756 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					FB97008F2B22F48100DFE756 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					FB9700A02B22F48200DFE756 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = FB97008F2B22F48100DFE756;
+					};
+					FB9700AA2B22F48300DFE756 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = FB97008F2B22F48100DFE756;
+					};
+				};
+			};
+			buildConfigurationList = FB97008B2B22F48100DFE756 /* Build configuration list for PBXProject "PeriodicalReservation" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB9700872B22F48100DFE756;
+			productRefGroup = FB9700912B22F48100DFE756 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB97008F2B22F48100DFE756 /* PeriodicalReservation */,
+				FB9700A02B22F48200DFE756 /* PeriodicalReservationTests */,
+				FB9700AA2B22F48300DFE756 /* PeriodicalReservationUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB97008E2B22F48100DFE756 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB97009C2B22F48200DFE756 /* Preview Assets.xcassets in Resources */,
+				FB9700982B22F48200DFE756 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB97009F2B22F48200DFE756 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB9700A92B22F48300DFE756 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB97008C2B22F48100DFE756 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB9700962B22F48100DFE756 /* ContentView.swift in Sources */,
+				FB9700942B22F48100DFE756 /* PeriodicalReservationApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB97009D2B22F48200DFE756 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB9700A62B22F48300DFE756 /* PeriodicalReservationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB9700A72B22F48300DFE756 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB9700B02B22F48300DFE756 /* PeriodicalReservationUITests.swift in Sources */,
+				FB9700B22B22F48300DFE756 /* PeriodicalReservationUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB9700A32B22F48200DFE756 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB97008F2B22F48100DFE756 /* PeriodicalReservation */;
+			targetProxy = FB9700A22B22F48200DFE756 /* PBXContainerItemProxy */;
+		};
+		FB9700AD2B22F48300DFE756 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB97008F2B22F48100DFE756 /* PeriodicalReservation */;
+			targetProxy = FB9700AC2B22F48300DFE756 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FB9700B32B22F48300DFE756 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FB9700B42B22F48300DFE756 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		FB9700B62B22F48300DFE756 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PeriodicalReservation/PeriodicalReservation.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PeriodicalReservation/Preview Content\"";
+				DEVELOPMENT_TEAM = NPGXXLHG78;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xplor.PeriodicalReservation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		FB9700B72B22F48300DFE756 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PeriodicalReservation/PeriodicalReservation.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PeriodicalReservation/Preview Content\"";
+				DEVELOPMENT_TEAM = NPGXXLHG78;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xplor.PeriodicalReservation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		FB9700B92B22F48300DFE756 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NPGXXLHG78;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xplor.PeriodicalReservationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeriodicalReservation.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PeriodicalReservation";
+			};
+			name = Debug;
+		};
+		FB9700BA2B22F48300DFE756 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NPGXXLHG78;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xplor.PeriodicalReservationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeriodicalReservation.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PeriodicalReservation";
+			};
+			name = Release;
+		};
+		FB9700BC2B22F48300DFE756 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NPGXXLHG78;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xplor.PeriodicalReservationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PeriodicalReservation;
+			};
+			name = Debug;
+		};
+		FB9700BD2B22F48300DFE756 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NPGXXLHG78;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xplor.PeriodicalReservationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PeriodicalReservation;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB97008B2B22F48100DFE756 /* Build configuration list for PBXProject "PeriodicalReservation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB9700B32B22F48300DFE756 /* Debug */,
+				FB9700B42B22F48300DFE756 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB9700B52B22F48300DFE756 /* Build configuration list for PBXNativeTarget "PeriodicalReservation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB9700B62B22F48300DFE756 /* Debug */,
+				FB9700B72B22F48300DFE756 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB9700B82B22F48300DFE756 /* Build configuration list for PBXNativeTarget "PeriodicalReservationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB9700B92B22F48300DFE756 /* Debug */,
+				FB9700BA2B22F48300DFE756 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB9700BB2B22F48300DFE756 /* Build configuration list for PBXNativeTarget "PeriodicalReservationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB9700BC2B22F48300DFE756 /* Debug */,
+				FB9700BD2B22F48300DFE756 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB9700882B22F48100DFE756 /* Project object */;
+}
