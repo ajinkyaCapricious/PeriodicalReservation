@@ -11,7 +11,8 @@ import SwiftUI
 struct PeriodicalReservationApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RecurringBooking()
+//            ContentView()
         }
     }
 }

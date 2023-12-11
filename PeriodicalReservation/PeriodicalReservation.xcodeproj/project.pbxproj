@@ -17,6 +17,10 @@
 		FB9700C12B2311C300DFE756 /* RecurringBooking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9700C02B2311C300DFE756 /* RecurringBooking.swift */; };
 		FB9700C32B2312B400DFE756 /* RecurringBookingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9700C22B2312B400DFE756 /* RecurringBookingViewModel.swift */; };
 		FB9700C62B231D9400DFE756 /* ListWithRadioButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9700C52B231D9400DFE756 /* ListWithRadioButtons.swift */; };
+		FB9700C82B260B9700DFE756 /* DateSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9700C72B260B9700DFE756 /* DateSelectionView.swift */; };
+		FB9700CB2B260C6600DFE756 /* DateSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9700CA2B260C6600DFE756 /* DateSelectionViewModel.swift */; };
+		FB9700CE2B263D2C00DFE756 /* CommonUtlity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9700CD2B263D2C00DFE756 /* CommonUtlity.swift */; };
+		FB9700D12B264A7300DFE756 /* Attendee.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9700D02B264A7300DFE756 /* Attendee.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		FB9700C02B2311C300DFE756 /* RecurringBooking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecurringBooking.swift; sourceTree = "<group>"; };
 		FB9700C22B2312B400DFE756 /* RecurringBookingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecurringBookingViewModel.swift; sourceTree = "<group>"; };
 		FB9700C52B231D9400DFE756 /* ListWithRadioButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWithRadioButtons.swift; sourceTree = "<group>"; };
+		FB9700C72B260B9700DFE756 /* DateSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionView.swift; sourceTree = "<group>"; };
+		FB9700CA2B260C6600DFE756 /* DateSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionViewModel.swift; sourceTree = "<group>"; };
+		FB9700CD2B263D2C00DFE756 /* CommonUtlity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtlity.swift; sourceTree = "<group>"; };
+		FB9700D02B264A7300DFE756 /* Attendee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attendee.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,7 @@
 		FB9700922B22F48100DFE756 /* PeriodicalReservation */ = {
 			isa = PBXGroup;
 			children = (
+				FB9700CC2B263D0F00DFE756 /* CommonUtility */,
 				FB9700BF2B23119300DFE756 /* BookingInfo */,
 				FB9700932B22F48100DFE756 /* PeriodicalReservationApp.swift */,
 				FB9700952B22F48100DFE756 /* ContentView.swift */,
@@ -139,9 +148,10 @@
 		FB9700BF2B23119300DFE756 /* BookingInfo */ = {
 			isa = PBXGroup;
 			children = (
+				FB9700CF2B264A5C00DFE756 /* Model */,
+				FB9700C92B260C5400DFE756 /* ViewModel */,
 				FB9700C42B231D8900DFE756 /* View */,
 				FB9700C02B2311C300DFE756 /* RecurringBooking.swift */,
-				FB9700C22B2312B400DFE756 /* RecurringBookingViewModel.swift */,
 			);
 			path = BookingInfo;
 			sourceTree = "<group>";
@@ -150,8 +160,34 @@
 			isa = PBXGroup;
 			children = (
 				FB9700C52B231D9400DFE756 /* ListWithRadioButtons.swift */,
+				FB9700C72B260B9700DFE756 /* DateSelectionView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FB9700C92B260C5400DFE756 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FB9700C22B2312B400DFE756 /* RecurringBookingViewModel.swift */,
+				FB9700CA2B260C6600DFE756 /* DateSelectionViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FB9700CC2B263D0F00DFE756 /* CommonUtility */ = {
+			isa = PBXGroup;
+			children = (
+				FB9700CD2B263D2C00DFE756 /* CommonUtlity.swift */,
+			);
+			path = CommonUtility;
+			sourceTree = "<group>";
+		};
+		FB9700CF2B264A5C00DFE756 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FB9700D02B264A7300DFE756 /* Attendee.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,10 +321,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB9700C32B2312B400DFE756 /* RecurringBookingViewModel.swift in Sources */,
+				FB9700CE2B263D2C00DFE756 /* CommonUtlity.swift in Sources */,
+				FB9700C82B260B9700DFE756 /* DateSelectionView.swift in Sources */,
 				FB9700C12B2311C300DFE756 /* RecurringBooking.swift in Sources */,
 				FB9700C62B231D9400DFE756 /* ListWithRadioButtons.swift in Sources */,
 				FB9700962B22F48100DFE756 /* ContentView.swift in Sources */,
+				FB9700D12B264A7300DFE756 /* Attendee.swift in Sources */,
 				FB9700942B22F48100DFE756 /* PeriodicalReservationApp.swift in Sources */,
+				FB9700CB2B260C6600DFE756 /* DateSelectionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
