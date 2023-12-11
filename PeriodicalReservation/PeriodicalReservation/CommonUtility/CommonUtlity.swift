@@ -11,9 +11,7 @@ import Swift
 
 class CommonUtlity {
     
-    
     static var shared = CommonUtlity()
-    
     
     func formattedDate(_ date: Date?) -> String {
         guard let date = date else {

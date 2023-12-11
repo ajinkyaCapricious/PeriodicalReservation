@@ -6,6 +6,8 @@
 //
 
 import Foundation
+
+
 struct Attendee: Codable, Identifiable {
     var id = UUID()
     let age: Int

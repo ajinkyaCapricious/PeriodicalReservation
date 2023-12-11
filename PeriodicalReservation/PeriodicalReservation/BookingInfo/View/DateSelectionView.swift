@@ -8,11 +8,13 @@
 import Foundation
 import SwiftUI
 
+
 struct DateSelectionView: View {
     var title: String
     @Binding var selectedDate: Date
     @Binding var isDatePickerVisible: Bool
-    
+    var isStartDate: Bool
+
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack {
@@ -32,15 +34,37 @@ struct DateSelectionView: View {
                     .onTapGesture {
                         isDatePickerVisible.toggle()
                     }
-                    .popover(isPresented: $isDatePickerVisible) {
-                        DatePicker("Select Date", selection: $selectedDate, in: ...Date(), displayedComponents: [.date])
-                            .datePickerStyle(GraphicalDatePickerStyle())
-                            .padding()
-                            .frame(width: 300)
-                            .onDisappear {
-                                isDatePickerVisible = false
-                            }
-                    }
+//                    .popover(isPresented: $isDatePickerVisible) {
+//                        DatePicker("Select Date", selection: $selectedDate, in: getDateRange(), displayedComponents: [.date])
+//                            .datePickerStyle(GraphicalDatePickerStyle())
+//                            .padding()
+//                            .frame(width: 300)
+//                            .onDisappear {
+//                                isDatePickerVisible = false
+//                            }
+//                    }
+//                    .popover(isPresented: $isDatePickerVisible, content: {
+//                                        VStack {
+//                                            DatePicker("Select Date", selection: $selectedDate, in: getDateRange(), displayedComponents: [.date])
+//                                                .datePickerStyle(GraphicalDatePickerStyle())
+//                                                .padding()
+//                                                .frame(width: 300)
+//                                        }
+//                                    })
+                    .popover(isPresented: $isDatePickerVisible, content: {
+                                        VStack {
+                                            DatePicker("Select Date", selection: Binding(
+                                                get: { self.selectedDate },
+                                                set: {
+                                                    self.selectedDate = $0
+                                                    self.isDatePickerVisible = false // Dismiss the popover after date selection
+                                                }
+                                            ), in: getDateRange(), displayedComponents: [.date])
+                                            .datePickerStyle(GraphicalDatePickerStyle())
+                                            .padding()
+                                            .frame(width: 300)
+                                        }
+                                    })
             }
         }
         .padding()
@@ -49,8 +73,14 @@ struct DateSelectionView: View {
                 .stroke(Color.black, lineWidth: 2)
         )
     }
-    
-    
-    
-    
+
+    private func getDateRange() -> ClosedRange<Date> {
+        if isStartDate {
+            // Allow selecting dates from today to any future date
+            return Date()...(Calendar.current.date(byAdding: .year, value: 100, to: Date()) ?? Date())
+        } else {
+            // Allow selecting dates from the start date to any future date
+            return selectedDate...Date.distantFuture
+        }
+    }
 }

@@ -7,25 +7,11 @@
 
 import Foundation
 
-
-class RoomsViewModel: ObservableObject {
-    
-    @Published var tableData: [String] = ["Ajinkya ", "Ram", "Shiva"]
-    @Published var selectedListItem: String?
-    @Published var isCollapsed: Bool = true
-    
-    init(tableData: [String], isCollapsed: Bool = false) {
-        self.isCollapsed = isCollapsed
-        self.tableData = tableData
-    }
-}
-
 class AttendeesViewModel: ObservableObject {
     
     @Published var attendees: [Attendee] = []
     @Published var selectedListItem: String?
     @Published var isCollapsed: Bool = false
-    
     
     init( isCollapsed: Bool = false) {
         self.isCollapsed = isCollapsed
@@ -57,7 +43,6 @@ class AttendeesViewModel: ObservableObject {
         switch result {
         case .success(let data):
             if let children = data["children"] {
-                // Ensure that 'children' is an array before attempting to decode it
                 if let jsonArray = children as? [[String: Any]] {
                     do {
                         let jsonData = try JSONSerialization.data(withJSONObject: jsonArray, options: [])
@@ -69,7 +54,7 @@ class AttendeesViewModel: ObservableObject {
                         print("Error decoding attendees: \(error.localizedDescription)")
                     }
                 } else {
-                    print("Invalid 'children' structure: Expected an array")
+                    print("Invalid ")
                 }
             }
         case .failure(let error):
@@ -77,35 +62,5 @@ class AttendeesViewModel: ObservableObject {
         }
     }
     
-}
-
-
-
-class NetworkService {
-    
-    static func fetchData<T: Decodable>(urlRequest: URLRequest, completion: @escaping (Result<T, Error>) -> Void) {
-        URLSession.shared.dataTask(with: urlRequest) { data, response, error in
-            if let error = error {
-                print("Network request error:", error.localizedDescription)
-                completion(.failure(error))
-                return
-            }
-            
-            guard let data = data else {
-                print("No data received.")
-                completion(.failure(NSError(domain: "Invalid data", code: 0, userInfo: nil)))
-                return
-            }
-            //JSON decoding error: The data couldn’t be read because it isn’t in the correct format.
-            do {
-                let decodedData = try JSONDecoder().decode(T.self, from: data)
-                print("Decoded data:", decodedData)
-                completion(.success(decodedData))
-            } catch {
-                print("JSON decoding error:", error.localizedDescription)
-                completion(.failure(error))
-            }
-        }.resume()
-    }
 }
 
