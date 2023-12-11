@@ -7,9 +7,15 @@
 
 import Foundation
 
+struct ChildrenResponse: Decodable {
+    let data: ChildrenData
+}
 
-struct Attendee: Codable, Identifiable {
-    var id = UUID()
+struct ChildrenData: Decodable {
+    let children: [Attendee]
+}
+
+struct Attendee: Codable {
     let age: Int
     let fkey: String
     let fullName: String

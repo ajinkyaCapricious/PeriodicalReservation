@@ -10,8 +10,7 @@ import SwiftUI
 struct RecurringBooking: View {
     
     @StateObject private var attendeeVM = AttendeesViewModel()
-    @StateObject private var viewModel2 = RoomsViewModel(tableData: ["Day Care", "Before School", "After School"], isCollapsed: true)
-    @ObservedObject private var dateViewModel = DateSelectionViewModel(startDate: Date(), endDate: Calendar.current.date(byAdding: .month, value: 1, to: Date()) ?? Date())
+    @ObservedObject private var dateVM = DateSelectionViewModel(startDate: Date(), endDate: Calendar.current.date(byAdding: .month, value: 1, to: Date()) ?? Date())
     
     var body: some View {
         NavigationView {
@@ -39,34 +38,31 @@ struct RecurringBooking: View {
                         )
                         .padding()
                 }
-                .onAppear {
-                    attendeeVM.fetchAttendees()
-                }
+                
                 //Date
                 HStack(spacing: 20) {
                     
                     DateSelectionView(
                         title: "Start Date",
-                        selectedDate: $dateViewModel.startDate,
-                        isDatePickerVisible: $dateViewModel.isStartDatePickerVisible, isStartDate: false
+                        selectedDate: $dateVM.startDate,
+                        isDatePickerVisible: $dateVM.isStartDatePickerVisible, isStartDate: false
                     )
                     
                     DateSelectionView(
                         title: "End Date",
-                        selectedDate: $dateViewModel.endDate,
-                        isDatePickerVisible: $dateViewModel.isEndDatePickerVisible, isStartDate: true
+                        selectedDate: $dateVM.endDate,
+                        isDatePickerVisible: $dateVM.isEndDatePickerVisible, isStartDate: true
                     )
                 }
                 .padding()
                 //days
                 VStack {
-                    ChooseDaysView(dateViewModel: dateViewModel)
+                    ChooseDaysView(dateViewModel: dateVM)
                 }
             }
         }
         .navigationTitle("First View")
     }
-    
 }
 
 #Preview {

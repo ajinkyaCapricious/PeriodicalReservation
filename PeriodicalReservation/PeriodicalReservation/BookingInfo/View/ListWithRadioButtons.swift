@@ -31,10 +31,11 @@ struct ListWithRadioButtons: View {
             }
             
             
-            List(viewModel.attendees, id: \.id) { attendee in
+            List(viewModel.arrAttendees, id: \.availableRoomsId) { attendee in
                 RadioButtonView(item: attendee.fullName, isSelected: attendee.fullName == viewModel.selectedListItem)
                     .onTapGesture {
                         viewModel.selectedListItem = attendee.fullName
+                        viewModel.fetchRooms(for: attendee)
                         viewModel.isCollapsed.toggle()
                     }
             }

@@ -24,7 +24,7 @@
 		FB9700D42B26D90B00DFE756 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9700D32B26D90B00DFE756 /* NetworkService.swift */; };
 		FB9700D62B26E79100DFE756 /* ChooseDaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9700D52B26E79100DFE756 /* ChooseDaysView.swift */; };
 		FB9700D82B26E7B100DFE756 /* RadioButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9700D72B26E7B100DFE756 /* RadioButtonView.swift */; };
-		FB9700DA2B26E7FD00DFE756 /* RoomsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9700D92B26E7FD00DFE756 /* RoomsViewModel.swift */; };
+		FB9700DC2B26F88E00DFE756 /* BookingRooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9700DB2B26F88E00DFE756 /* BookingRooms.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +66,7 @@
 		FB9700D32B26D90B00DFE756 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		FB9700D52B26E79100DFE756 /* ChooseDaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseDaysView.swift; sourceTree = "<group>"; };
 		FB9700D72B26E7B100DFE756 /* RadioButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonView.swift; sourceTree = "<group>"; };
-		FB9700D92B26E7FD00DFE756 /* RoomsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsViewModel.swift; sourceTree = "<group>"; };
+		FB9700DB2B26F88E00DFE756 /* BookingRooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingRooms.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,7 +181,6 @@
 			children = (
 				FB9700C22B2312B400DFE756 /* RecurringBookingViewModel.swift */,
 				FB9700CA2B260C6600DFE756 /* DateSelectionViewModel.swift */,
-				FB9700D92B26E7FD00DFE756 /* RoomsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -198,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				FB9700D02B264A7300DFE756 /* Attendee.swift */,
+				FB9700DB2B26F88E00DFE756 /* BookingRooms.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -342,6 +342,7 @@
 			files = (
 				FB9700D42B26D90B00DFE756 /* NetworkService.swift in Sources */,
 				FB9700C32B2312B400DFE756 /* RecurringBookingViewModel.swift in Sources */,
+				FB9700DC2B26F88E00DFE756 /* BookingRooms.swift in Sources */,
 				FB9700CE2B263D2C00DFE756 /* CommonUtlity.swift in Sources */,
 				FB9700D62B26E79100DFE756 /* ChooseDaysView.swift in Sources */,
 				FB9700C82B260B9700DFE756 /* DateSelectionView.swift in Sources */,
@@ -352,7 +353,6 @@
 				FB9700D12B264A7300DFE756 /* Attendee.swift in Sources */,
 				FB9700942B22F48100DFE756 /* PeriodicalReservationApp.swift in Sources */,
 				FB9700CB2B260C6600DFE756 /* DateSelectionViewModel.swift in Sources */,
-				FB9700DA2B26E7FD00DFE756 /* RoomsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,10 +509,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = PeriodicalReservation/PeriodicalReservation.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PeriodicalReservation/Preview Content\"";
-				DEVELOPMENT_TEAM = NPGXXLHG78;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -533,6 +534,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.xplor.PeriodicalReservation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -548,10 +550,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = PeriodicalReservation/PeriodicalReservation.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PeriodicalReservation/Preview Content\"";
-				DEVELOPMENT_TEAM = NPGXXLHG78;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -572,6 +575,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.xplor.PeriodicalReservation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
