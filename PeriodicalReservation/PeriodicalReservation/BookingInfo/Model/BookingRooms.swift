@@ -19,7 +19,7 @@ struct RoomsData: Decodable {
     let bookingRooms: [Room]
 }
 
-struct Room: Codable {
+struct Room: Codable, Equatable {
     
     let fee: String
     let endTime: String
@@ -27,4 +27,8 @@ struct Room: Codable {
     let roomFkey: String
     let roomName: String
     let startTime: String
+    
+    static func == (lhs: Room, rhs: Room) -> Bool {
+        return lhs.roomFkey == rhs.roomFkey
+    }
 }

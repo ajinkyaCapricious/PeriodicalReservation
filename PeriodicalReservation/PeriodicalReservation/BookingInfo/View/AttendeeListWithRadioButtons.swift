@@ -1,16 +1,15 @@
 //
-//  ListWithRadioButtons.swift
+//  AttendeeListWithRadioButtons.swift
 //  PeriodicalReservation
 //
 //  Created by Ajinkya Adole on 08/12/23.
 //
 
 import Foundation
-
 import SwiftUI
 
-struct ListWithRadioButtons: View {
-    @ObservedObject var viewModel: AttendeesViewModel
+struct AttendeeListWithRadioButtons: View {
+    @ObservedObject var viewModel: RecurringBookingViewModel
     
     var title: String?
     var body: some View {
@@ -22,7 +21,7 @@ struct ListWithRadioButtons: View {
                     .font(.headline)
                     .padding()
                 
-                Text(self.viewModel.selectedListItem ?? "")
+                Text(self.viewModel.selectedAttendeeItem?.fullName ?? "")
                     .font(.headline)
                 
             }
@@ -32,9 +31,9 @@ struct ListWithRadioButtons: View {
             
             
             List(viewModel.arrAttendees, id: \.availableRoomsId) { attendee in
-                RadioButtonView(item: attendee.fullName, isSelected: attendee.fullName == viewModel.selectedListItem)
+                RadioButtonView(item: attendee.fullName, isSelected: attendee == viewModel.selectedAttendeeItem)
                     .onTapGesture {
-                        viewModel.selectedListItem = attendee.fullName
+                        viewModel.selectedAttendeeItem = attendee
                         viewModel.fetchRooms(for: attendee)
                         viewModel.isCollapsed.toggle()
                     }
@@ -46,4 +45,5 @@ struct ListWithRadioButtons: View {
         }
     }
 }
+
 

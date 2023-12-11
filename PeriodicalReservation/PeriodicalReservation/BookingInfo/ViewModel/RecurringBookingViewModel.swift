@@ -7,13 +7,18 @@
 
 import Foundation
 
-class AttendeesViewModel: ObservableObject {
+class RecurringBookingViewModel: ObservableObject {
     
     @Published var arrAttendees: [Attendee] = []
     @Published var arrRoom: [Room] = []
-    @Published var selectedListItem: String?
+    @Published var selectedAttendeeItem: Attendee?
+    @Published var selectedRoomItem: Room?
+    
     @Published var isCollapsed: Bool = false
     @Published var isRoomCollapsed: Bool = true
+    @Published var finalSummaryViewModel = FinalSummaryViewModel()
+    @Published var dateViewModel = DateSelectionViewModel(startDate: Date(), endDate: Calendar.current.date(byAdding: .month, value: 1, to: Date()) ?? Date())
+    
     
     init( isCollapsed: Bool = false) {
         self.isCollapsed = isCollapsed
@@ -53,6 +58,23 @@ class AttendeesViewModel: ObservableObject {
         }
     }
     
+    
+       func moveToFinalSummary() {
+//           guard let objAttendee = selectedAttendeeItem , let objRoom = selectedRoomItem else {
+//               return
+//           }
+           finalSummaryViewModel.setBookingData(
+//               attendee: objAttendee,
+//               room: objRoom,
+               startDate: dateViewModel.startDate,
+               endDate: dateViewModel.endDate,
+               numberOfDays: dateViewModel.calculateTotalDays(),
+               selectedDays: dateViewModel.selectedDays
+           )
+           
+           
+//           isFinalSummaryActive = true
+       }
     
 }
 

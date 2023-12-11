@@ -9,8 +9,8 @@ import SwiftUI
 
 struct RecurringBooking: View {
     
-    @StateObject private var attendeeVM = AttendeesViewModel()
-    @ObservedObject private var dateVM = DateSelectionViewModel(startDate: Date(), endDate: Calendar.current.date(byAdding: .month, value: 1, to: Date()) ?? Date())
+    @StateObject private var viewModel = RecurringBookingViewModel()
+    @State private var isFinalSummaryActive = false
     
     var body: some View {
         NavigationView {
@@ -21,17 +21,17 @@ struct RecurringBooking: View {
                     Text("New Recurring Booking")
                         .font(.system(size: 23))
                         .bold()
-                    ListWithRadioButtons(viewModel: attendeeVM, title: "Who's going?")
+                    AttendeeListWithRadioButtons(viewModel: viewModel, title: "Who's going?")
                         .overlay(
                             RoundedRectangle(cornerRadius: 8)
                                 .stroke(Color.black, lineWidth: 2)
                         )
                         .padding()
                         .onAppear {
-                            attendeeVM.fetchAttendees()
+                            viewModel.fetchAttendees()
                         }
                     
-                    ListWithRadioButtons(viewModel: attendeeVM, title: "choose a room")
+                    RoomListWithRadioButtons(viewModel: viewModel, title: "choose a room")
                         .overlay(
                             RoundedRectangle(cornerRadius: 8)
                                 .stroke(Color.black, lineWidth: 2)
@@ -41,24 +41,45 @@ struct RecurringBooking: View {
                 
                 //Date
                 HStack(spacing: 20) {
-                    
                     DateSelectionView(
                         title: "Start Date",
-                        selectedDate: $dateVM.startDate,
-                        isDatePickerVisible: $dateVM.isStartDatePickerVisible, isStartDate: false
+                        selectedDate: $viewModel.dateViewModel.startDate,
+                        isDatePickerVisible: $viewModel.dateViewModel.isStartDatePickerVisible, isStartDate: false
                     )
                     
                     DateSelectionView(
                         title: "End Date",
-                        selectedDate: $dateVM.endDate,
-                        isDatePickerVisible: $dateVM.isEndDatePickerVisible, isStartDate: true
+                        selectedDate: $viewModel.dateViewModel.endDate,
+                        isDatePickerVisible: $viewModel.dateViewModel.isEndDatePickerVisible, isStartDate: true
                     )
                 }
                 .padding()
                 //days
                 VStack {
-                    ChooseDaysView(dateViewModel: dateVM)
+                    ChooseDaysView(dateViewModel: viewModel.dateViewModel)
                 }
+                
+                Button(action: {
+                    viewModel.moveToFinalSummary()
+                    isFinalSummaryActive = true
+                }) {
+                    Text("Continue to Final Summary")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.blue)
+                        .cornerRadius(8)
+                }
+                .padding()
+                //GotoNew Screen
+                NavigationLink(
+                    destination: FinalSummary(finalSummaryViewModel: viewModel.finalSummaryViewModel),
+                    isActive: $isFinalSummaryActive
+                ) {
+                    EmptyView()
+                }
+                .hidden()
+                
             }
         }
         .navigationTitle("First View")
@@ -68,4 +89,3 @@ struct RecurringBooking: View {
 #Preview {
     RecurringBooking()
 }
-
