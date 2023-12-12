@@ -21,8 +21,8 @@ struct RoomListWithRadioButtons: View {
                     .font(.headline)
                     .padding()
                 
-                Text(self.viewModel.selectedRoomItem?.roomName ?? "")
-                    .font(.headline)
+                Text(createFinalString(input: viewModel.selectedRoomItem))
+                    .font(.subheadline)
                 
             }
             .onTapGesture {
@@ -31,17 +31,30 @@ struct RoomListWithRadioButtons: View {
             
             
             List(viewModel.arrRoom, id: \.roomFkey) { room in
-                RadioButtonView(item: room.roomName, isSelected: room == viewModel.selectedRoomItem)
+                
+                RadioButtonView(item: createFinalString(input: room), isSelected: room == viewModel.selectedRoomItem)
                     .onTapGesture {
                         viewModel.selectedRoomItem = room
                         viewModel.isRoomCollapsed.toggle()
                     }
             }
-            
+            .id(UUID()) //to forcely update the screen
             .listStyle(PlainListStyle())
             .frame(height: viewModel.isRoomCollapsed ? 0 : 133) // Adjust the collapsed and expanded heights
             
         }
     }
+    
+    private func createFinalString(input : Room?) -> String {
+        guard let obj = input else {
+            return ""
+        }
+        let finalString = "\(obj.roomName) - \(CommonUtlity.shared.convertToAmPm(timeString: obj.startTime) ?? "") - \(CommonUtlity.shared.convertToAmPm(timeString: obj.endTime) ?? "")"
+        
+        return finalString
+    }
+    
 }
+
+
 

@@ -19,6 +19,8 @@ class RecurringBookingViewModel: ObservableObject {
     @Published var finalSummaryViewModel = FinalSummaryViewModel()
     @Published var dateViewModel = DateSelectionViewModel(startDate: Date(), endDate: Calendar.current.date(byAdding: .month, value: 1, to: Date()) ?? Date())
     
+    @Published var isDataFilledup : Bool = false
+    
     
     init( isCollapsed: Bool = false) {
         self.isCollapsed = isCollapsed
@@ -50,28 +52,29 @@ class RecurringBookingViewModel: ObservableObject {
         case .success(let roomsResponse):
             let rooms = roomsResponse.data.bookingRooms
             DispatchQueue.main.async {
-                // Handle the fetched rooms data
-                print(rooms)
+                self.arrRoom = rooms
             }
         case .failure(let error):
             print("Error fetching rooms: \(error.localizedDescription)")
         }
     }
     
+    func checkDataFilledup() -> Bool {
+          return selectedAttendeeItem != nil && selectedRoomItem != nil && !dateViewModel.selectedDays.isEmpty
+      }
     
        func moveToFinalSummary() {
-//           guard let objAttendee = selectedAttendeeItem , let objRoom = selectedRoomItem else {
-//               return
-//           }
+           guard let objAttendee = selectedAttendeeItem , let objRoom = selectedRoomItem else {
+               return
+           }
            finalSummaryViewModel.setBookingData(
-//               attendee: objAttendee,
-//               room: objRoom,
+               attendee: objAttendee,
+               room: objRoom,
                startDate: dateViewModel.startDate,
                endDate: dateViewModel.endDate,
                numberOfDays: dateViewModel.calculateTotalDays(),
                selectedDays: dateViewModel.selectedDays
            )
-           
            
 //           isFinalSummaryActive = true
        }

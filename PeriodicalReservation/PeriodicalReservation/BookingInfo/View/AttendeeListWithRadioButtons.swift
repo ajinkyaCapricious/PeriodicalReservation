@@ -30,11 +30,13 @@ struct AttendeeListWithRadioButtons: View {
             }
             
             
-            List(viewModel.arrAttendees, id: \.availableRoomsId) { attendee in
+            List(viewModel.arrAttendees, id: \.fkey) { attendee in
                 RadioButtonView(item: attendee.fullName, isSelected: attendee == viewModel.selectedAttendeeItem)
                     .onTapGesture {
                         viewModel.selectedAttendeeItem = attendee
                         viewModel.fetchRooms(for: attendee)
+                        viewModel.selectedRoomItem = nil
+                        viewModel.arrRoom.removeAll()
                         viewModel.isCollapsed.toggle()
                     }
             }
@@ -47,3 +49,7 @@ struct AttendeeListWithRadioButtons: View {
 }
 
 
+
+                                                        
+                                                        
+                                                        

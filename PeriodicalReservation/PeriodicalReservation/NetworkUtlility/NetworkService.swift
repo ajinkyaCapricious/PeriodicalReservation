@@ -27,7 +27,7 @@ class NetworkService {
         request.addValue(AppConfiguration.accessToken, forHTTPHeaderField: "x-collection-access-token")
        
         URLSession.shared.dataTask(with: request) { data, response, error in
-            print("Received data:", String(data: data! , encoding: .utf8) ?? "Unable to convert data to string")
+           // print("Received data:", String(data: data! , encoding: .utf8) ?? "Unable to convert data to string")
 
             if let error = error {
                 print("Network request error:", error.localizedDescription)
