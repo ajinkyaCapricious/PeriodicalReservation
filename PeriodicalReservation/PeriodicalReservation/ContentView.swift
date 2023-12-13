@@ -13,28 +13,27 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
+            // Your existing content goes here
             
-            HStack {
-                Text("Choose Days: ")
-                    .font(.title)
-                    .padding(.leading)
-                Spacer()
-            }
-            HStack {
-                ForEach(["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"], id: \.self) { day in
-                    Button(action: {
-                        toggleDaySelection(day)
-                        print(selectedDays)
-                    }) {
-                        Text(day)
-                            .padding()
-                            .background(selectedDays.contains(day) ? Color.blue : Color.gray)
-                            .foregroundColor(selectedDays.contains(day) ? Color.white : Color.black)
-                            .cornerRadius(8)
-                    }
+            // Fixed box with icon and text
+            ZStack {
+                RoundedRectangle(cornerRadius: 8)
+                    .fill(Color.white) // Background color of the box
+                    .frame(width: 120, height: 60) // Adjust the size as needed
+                    .shadow(radius: 3)
+                
+                HStack(spacing: 10) {
+                    Image(systemName: "person.circle.fill")
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(.blue)
+                    
+                    Text("User Name")
+                        .font(.headline)
                 }
+                .padding(8) // Padding for the content inside the box
             }
-            .padding()
+            .offset(x: UIScreen.main.bounds.width - 200, y: 20) // Adjust the offset position as needed
         }
     }
     

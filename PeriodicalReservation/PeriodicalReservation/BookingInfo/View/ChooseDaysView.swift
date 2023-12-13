@@ -23,6 +23,7 @@ struct ChooseDaysView: View {
                 ForEach(["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"], id: \.self) { day in
                     Button(action: {
                         dateViewModel.toggleDaySelection(day)
+                        
                     }) {
                         Text(day)
                             .padding()

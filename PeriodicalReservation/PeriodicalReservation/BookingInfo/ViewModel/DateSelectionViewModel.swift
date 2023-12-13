@@ -27,8 +27,9 @@ class DateSelectionViewModel: ObservableObject {
         
         while currentDate <= endDate {
             let weekday = Calendar.current.component(.weekday, from: currentDate)
+            print("WEKDAY :: \(weekday)")
             let weekdayString = Calendar.current.shortWeekdaySymbols[weekday - 1].uppercased()
-            
+            print("WEKDAYString :: \(weekdayString)")
             if selectedDays.contains(weekdayString) {
                 totalDays += 1
             }
@@ -46,6 +47,4 @@ class DateSelectionViewModel: ObservableObject {
     }
     
 }
-
-
 
