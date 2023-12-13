@@ -13,6 +13,8 @@ struct RecurringBooking: View {
     @State private var isFinalSummaryActive = false
     @State private var showAlert = false
     @State private var alertMessage = ""
+    @StateObject var finalSummaryViewModel = FinalSummaryViewModel()
+
     
     var body: some View {
         NavigationView {
@@ -84,7 +86,7 @@ struct RecurringBooking: View {
                         .padding()
                         .background(Color.blue)
                         .cornerRadius(8)
-                        .frame(maxWidth: 100)
+                        .frame(maxWidth: 250)
                 }
                 .alert(isPresented: $showAlert) {
                                Alert(title: Text("Alert"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
@@ -104,6 +106,7 @@ struct RecurringBooking: View {
             }
         }
         .navigationTitle("First View")
+        
     }
     
     

@@ -9,7 +9,9 @@ import SwiftUI
 
 struct FinalSummary: View {
     @ObservedObject var finalSummaryViewModel: FinalSummaryViewModel
+    @Environment(\.presentationMode) var presentationMode
     
+
     var body: some View {
         
         
@@ -84,6 +86,36 @@ struct FinalSummary: View {
             
             
             Spacer()
+            
+            Button(action: {
+                
+                presentationMode.wrappedValue.dismiss()
+
+                       }) {
+                           Text("change Booking")
+                               .foregroundColor(.blue)
+                               .padding()
+                               .background(Color.white)
+                               .padding(.horizontal, 20)
+                               .border(.blue)
+                       }
+                       
+                       Button(action: {
+                           UIApplication.shared.perform(#selector(NSXPCConnection.suspend))
+                                           DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                               exit(0)
+                                           }
+                       }) {
+                           Text("Done")
+                               .foregroundColor(.white)
+                               .padding()
+                               .background(Color.blue)
+                               .cornerRadius(8)
+                               .padding(.horizontal, 20)
+                               
+                       }
+                       .padding(.bottom, 20)
+            
         }
         .padding(.horizontal, 20)
         
